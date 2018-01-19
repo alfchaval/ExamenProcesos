@@ -1,0 +1,10 @@
+package dam;
+
+public class PaqueteInstalado {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

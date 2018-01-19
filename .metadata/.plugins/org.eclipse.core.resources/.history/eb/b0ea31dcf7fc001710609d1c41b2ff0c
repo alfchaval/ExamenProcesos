@@ -1,0 +1,9 @@
+package dam;
+
+public class PinchaGlobos extends Thread{
+
+	public void run() {
+		
+	}
+	
+}

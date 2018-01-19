@@ -1,0 +1,55 @@
+package dam;
+
+public class Globo {
+	
+	private final int volumenInicial = 1;
+	private final int volumenMaximo = 5;
+	
+	private int volumen;
+	private boolean pinchado;
+	private boolean hinchandose;
+	
+	public Globo() {
+		this.volumen = volumenInicial;
+		this.pinchado = false;
+		this.hinchandose = false;
+	}
+	
+	public int getVolumen() {
+		return this.volumen;
+	}
+	
+	public void increaseVolumen() {
+		if(!this.pinchado) {
+			this.volumen++;
+			if(volumen > volumenMaximo) {
+				System.out.println("El globo " + this.getNombre + " explotó");
+				pincha();
+			}
+		}
+	}
+	
+	public boolean estaPinchado() {
+		return this.pinchado;
+	}
+	
+	public void pincha(PinchaGlobos PG) {
+		System.out.println(PG.getNombre() + " pinchó el globo");
+		pincha();
+	}
+	
+	public void pincha() {
+		this.volumen = 0;
+		this.pinchado = true;
+		notifyAll();
+	}
+	
+	public boolean estaHinchandose() {
+		return this.hinchandose;
+	}
+	
+	public void empiezaAHincharse() {
+		this.hinchandose = true;
+	}
+
+}

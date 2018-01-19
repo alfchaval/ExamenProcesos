@@ -1,0 +1,43 @@
+package dam;
+
+public class HinchaGlobos extends Thread{
+	
+	private final int espera = 1000;
+	private Globos globos;
+	private String nombre;
+	
+	private Globo globoHinchandose;
+	
+	public HinchaGlobos(Globos globos, String nombre) {
+		this.globos = globos;
+		this.nombre = nombre;
+	}
+
+	public void run() {
+		while(!globos.todosPinchados()) {
+			globoHinchandose = globos.pideGlobo(this);
+			if(globoHinchandose != null) {
+				while (!globoHinchandose.estaPinchado()) {
+					try {
+						this.sleep(espera);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+					globoHinchandose.increaseVolumen();
+				}
+				notifyAll();
+			}
+			else {
+				try {
+					this.wait();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+	
+	public String getNombre() {
+		return this.nombre;
+	}
+}

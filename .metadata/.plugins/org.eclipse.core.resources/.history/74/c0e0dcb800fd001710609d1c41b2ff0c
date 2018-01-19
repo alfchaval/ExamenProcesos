@@ -1,0 +1,22 @@
+package dam;
+
+public class HinchaGlobos extends Thread{
+	
+	private Globos globos;
+	public String nombre;
+	
+	private Globo globoHinchandose;
+	
+	public HinchaGlobos(Globos globos, String nombre) {
+		this.globos = globos;
+		this.nombre = nombre;
+	}
+
+	public void run() {
+		while(!globos.todosPinchados()) {
+			globoHinchandose = globos.pideGlobo(this);
+			while (globoHinchandose != null) {
+			}
+		}
+	}
+}

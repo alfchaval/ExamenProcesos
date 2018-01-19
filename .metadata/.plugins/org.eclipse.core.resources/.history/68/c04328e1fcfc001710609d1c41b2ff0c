@@ -1,0 +1,32 @@
+package dam;
+
+public class Globos {
+	
+	public final int maximoDeGlobos = 10;
+	public final int volumenInicial = 1;
+	public final int volumenMaximo = 5;
+	public int[] globos;
+	
+	public Globos() {
+		globos = new int[maximoDeGlobos];
+		for (int i = 0; i < globos.length; i++) {
+			globos[i] = volumenInicial;
+		}
+	}
+	
+	public boolean pinchado(int i) {
+		return globos[i] == 0;
+	}
+	
+	public boolean todosPinchados() {
+		boolean result = true;
+		int index = 0;
+		while(result && index < maximoDeGlobos) {
+			if(!pinchado(0)) {
+				result = false;
+			}
+		}
+		return result;
+	}
+
+}

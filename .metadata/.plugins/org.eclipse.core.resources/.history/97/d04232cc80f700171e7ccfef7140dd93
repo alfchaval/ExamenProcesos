@@ -1,0 +1,9 @@
+import java.net.Socket;
+
+public class ServidorHilo extends Thread {
+
+	public ServidorHilo(Socket socket, int id) {
+
+	}
+
+}

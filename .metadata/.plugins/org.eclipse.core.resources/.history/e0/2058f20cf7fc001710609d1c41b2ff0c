@@ -1,0 +1,14 @@
+package dam;
+
+public class Principal {
+
+	private Globos globos = new Globos();
+	private HinchaGlobos[] hinchaGlobos= new HinchaGlobos[5];
+	private PinchaGlobos[] pinchaGlobos= new PinchaGlobos[5];
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

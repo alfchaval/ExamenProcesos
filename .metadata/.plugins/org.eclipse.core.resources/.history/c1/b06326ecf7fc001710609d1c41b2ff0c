@@ -1,0 +1,9 @@
+package dam;
+
+public class Globos {
+	
+	int maximoDeGlobos = 10;
+	
+	
+
+}

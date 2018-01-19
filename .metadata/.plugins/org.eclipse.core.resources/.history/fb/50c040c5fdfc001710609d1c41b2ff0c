@@ -1,0 +1,22 @@
+package dam;
+
+public class Globo {
+	
+	private final int volumenInicial = 1;
+	private final int volumenMaximo = 5;
+	
+	private int volumen;
+	
+	public Globo() {
+		this.volumen = volumenInicial;
+	}
+	
+	public int getVolumen() {
+		return this.volumen;
+	}
+	
+	public int setVolumen(int newVolumen) {
+		this.volumen = newVolumen;
+	}
+
+}

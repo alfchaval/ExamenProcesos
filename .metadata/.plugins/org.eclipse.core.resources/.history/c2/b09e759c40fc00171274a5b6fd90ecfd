@@ -1,0 +1,36 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.Socket;
+
+public class Cliente {
+	
+	static final String HOST = "192.168.3.57";
+	static final int PUERTO = 5000;
+	
+	public Cliente() {
+		try {
+			Socket skCli = new Socket(HOST, PUERTO);
+			InputStreamReader is = new InputStreamReader(skCli.getInputStream(), "utf8");
+			BufferedReader br = new BufferedReader(is);
+			
+			System.out.println(br.readLine()); //recibimos el saludo desde el servidor
+			
+			skCli.close();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		System.setProperty("java.net.preferIPv4Stack", "true");
+		while(true) {
+			new Cliente();
+		}
+		
+
+	}
+
+}

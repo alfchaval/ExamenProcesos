@@ -1,0 +1,54 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.util.Scanner;
+
+public class Cliente {
+	
+	static final String HOST = "192.168.3.57";
+	static final int PUERTO = 5000;
+	Scanner entrada;
+	
+	private String LeerMensaje() {
+		System.out.println("Introduce el mensaje a enviar");
+		String mensaje = entrada.nextLine();
+		return mensaje;
+	}
+	
+	public Cliente() {
+		try {
+			Socket skCli = new Socket(HOST, PUERTO);
+			BufferedReader br = new BufferedReader(new InputStreamReader(skCli.getInputStream(), "utf-8"));
+			BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in, "utf-8"));
+			
+			PrintWriter pw = new PrintWriter(new OutputStreamWriter(skCli.getOutputStream(), "utf-8"), true);
+			
+			System.out.println(br.readLine()); //recibimos el saludo desde el servidor
+			
+			//enviar mensaje pedido por consola
+			System.out.println("Mensaje para enviar");
+			String mensaje = teclado.readLine();
+			System.out.println("Enviando al servidor el mensaje " + mensaje);
+			pw.println(mensaje);
+			
+			skCli.close();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		System.setProperty("java.net.preferIPv4Stack", "true");
+		while(true) {
+			new Cliente();
+		}
+		
+
+	}
+
+}

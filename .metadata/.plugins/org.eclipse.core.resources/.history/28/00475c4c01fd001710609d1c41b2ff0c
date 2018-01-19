@@ -1,0 +1,51 @@
+package dam;
+
+public class Globos {
+	
+	public final int maximoDeGlobos = 10;
+	public final int maximoDeGlobosHinchandose = 3;
+	public Globo[] listaDeGlobos;
+	public int globosHinchandose;
+	
+	public Globos() {
+		listaDeGlobos = new Globo[maximoDeGlobos];
+		for (int i = 0; i < listaDeGlobos.length; i++) {
+			listaDeGlobos[i] = new Globo();
+		}
+		this.globosHinchandose = 0;
+	}
+	
+	public boolean pinchado(int i) {
+		return listaDeGlobos[i].estaPinchado();
+	}
+	
+	public boolean todosPinchados() {
+		boolean result = true;
+		int index = 0;
+		while(result && index < maximoDeGlobos) {
+			if(!pinchado(0)) {
+				result = false;
+			}
+			index++;
+		}
+		return result;
+	}
+	
+	public synchronized Globo pideGlobo(HinchaGlobos HG) {
+		Globo globo = null;
+		if(globosHinchandose < maximoDeGlobosHinchandose) {
+			int index = 0;
+			while(globo == null && index < maximoDeGlobos) {
+				if(!listaDeGlobos[index].estaPinchado() && !listaDeGlobos[index].estaHinchandose()) {
+					globo = listaDeGlobos[index];
+					globo.estaHinchandose();
+					System.out.println("Entregado el globo " + (index+1) + " a " + HG.getN());
+				}
+				index++;
+			}
+		}
+
+		return globo;
+	}
+
+}

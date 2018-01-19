@@ -1,0 +1,12 @@
+package dam;
+
+public class Principal {
+
+	private Globos globos = new Globos();
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

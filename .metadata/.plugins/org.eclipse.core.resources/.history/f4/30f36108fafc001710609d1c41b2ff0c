@@ -1,0 +1,15 @@
+package dam;
+
+public class PinchaGlobos extends Thread{
+	
+	Globos globos;
+	
+	public PinchaGlobos(Globos globos) {
+		this.globos = globos;
+	}
+
+	public void run() {
+		
+	}
+	
+}

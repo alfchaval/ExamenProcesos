@@ -1,0 +1,16 @@
+package dam;
+
+public class HinchaGlobos extends Thread{
+	
+	private Globos globos;
+	private String nombre;
+	
+	public HinchaGlobos(Globos globos, String nombre) {
+		this.globos = globos;
+		this.nombre = nombre;
+	}
+
+	public void run() {
+		
+	}
+}

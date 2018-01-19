@@ -1,0 +1,18 @@
+import java.net.Socket;
+
+public class Cliente {
+	
+	static final String HOST = "localhost";
+	static final int PUERTO = 5001;
+	
+	public Cliente() {
+		Socket skCli = new Socket(HOST, PUERTO);
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

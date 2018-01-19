@@ -1,0 +1,34 @@
+package dam;
+
+public class Globo {
+	
+	private final int volumenInicial = 1;
+	private final int volumenMaximo = 5;
+	
+	private int volumen;
+	private boolean pinchado;
+	
+	public Globo() {
+		this.volumen = volumenInicial;
+		this.pinchado = false;
+	}
+	
+	public int getVolumen() {
+		return this.volumen;
+	}
+	
+	public void increaseVolumen() {
+		if(!this.pinchado) {
+			this.volumen++;
+			if(volumen > volumenMaximo) {
+				this.volumen = 0;
+				this.pinchado = true;
+			}
+		}
+	}
+	
+	public boolean estaPinchado() {
+		return this.pinchado;
+	}
+
+}

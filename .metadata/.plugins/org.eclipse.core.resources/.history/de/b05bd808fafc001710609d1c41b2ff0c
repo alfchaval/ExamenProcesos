@@ -1,0 +1,14 @@
+package dam;
+
+public class HinchaGlobos extends Thread{
+	
+Globos globos;
+	
+	public HinchaGlobos(Globos globos) {
+		this.globos = globos;
+	}
+
+	public void run() {
+		
+	}
+}

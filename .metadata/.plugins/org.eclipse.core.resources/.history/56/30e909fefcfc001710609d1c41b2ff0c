@@ -1,0 +1,23 @@
+package dam;
+
+public class PinchaGlobos extends Thread{
+	
+	private Globos globos;
+	public String nombre;
+	
+	public PinchaGlobos(Globos globos, String nombre) {
+		this.globos = globos;
+		this.nombre = nombre;
+	}
+
+	public void run() {
+		while(!globos.todosPinchados()) {
+			
+		}
+	}
+	
+	public void pincha(int i) {
+		globos.globos[i] = 0;
+	}
+	
+}

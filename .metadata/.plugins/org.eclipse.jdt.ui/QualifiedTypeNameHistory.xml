@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.management.ManagementFactory"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.io.UnsupportedEncodingException"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.util.concurrent.atomic.AtomicInteger"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="dam.psp.ControladorFichero"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="java.lang.ProcessBuilder"/>
+<fullyQualifiedTypeName name="java.util.zip.InflaterInputStream"/>
+<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="java.net.ServerSocket"/>
+<fullyQualifiedTypeName name="java.net.Socket"/>
+<fullyQualifiedTypeName name="java.io.BufferedOutputStream"/>
+<fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+</qualifiedTypeNameHistroy>

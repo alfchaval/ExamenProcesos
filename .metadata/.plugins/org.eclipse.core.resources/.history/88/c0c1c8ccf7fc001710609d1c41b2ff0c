@@ -1,0 +1,8 @@
+package dam;
+
+public class HinchaGlobos extends Thread{
+
+	public void run() {
+		
+	}
+}
